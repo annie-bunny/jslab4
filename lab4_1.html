@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf8">
+			<title>Лабораторная работа №4</title>
+			<link rel="stylesheet" type="text/css" href="style\bootstrap.css">
+					<script>
+					function hello()
+					{ 
+					var r=document.getElementById('surname').value;
+					var n=document.getElementById('name').value;
+					var o=document.getElementById('grandname').value;					
+					var g=document.getElementById('god').value;					
+					var m=document.getElementById('mesto').value;					
+					var h=document.getElementById('hobby').value;					
+					var l=document.getElementById('nolike').value;					
+						var win=window.open("","","width=600,height=700"); // переменная win экземпляр объекта window,создается пустое окно	
+						win.document.open();  // открываем запись в это окно - объект win
+						str = "<h1> О себе </h1><hr><P>";
+						win.document.write(str);  // вывод строки в документ окна win
+						str = '<p> Я, '+r+' '+n+' '+o+' родился в '+g+' '+' году в городе '+m+'.</p>';
+						win.document.write(str);
+						str = '<p> Больше всего я люблю '+h+' '+'и очень не люблю '+l+'. Было бы замечательно, всю жизнь только '+h+', но к сожалению приходится иногда и '+l+ '.</p>';
+						win.document.write(str); 
+						str ='<input type="button" value="Закрыть"'   // формирование и вывод кнопки закрытия
+						+'onClick="window.close();">';
+						win.document.write(str);  // закрываем вывод в документ объекта win
+						win.document.close();
+						}
+					</script>
+	</head>
+			<body>
+			<div class="row">
+				<div class="col-sm-4"></div>
+					<div class="col-sm-4">
+						<h1>Анкета</h1>
+						<hr> 
+							<form class="form">
+							   <b>Фамилия:</b>
+							   <div class="form-group">
+									<p><input type="text" value="Горбунков" class="form-control" id='surname'></p>
+							   </div>
+							   <b>Имя:</b>
+							   <div class="form-group">
+									<p><input  type="text" value="Семен"  class="form-control" id='name'></p>
+							   </div>
+							   <b>Отчество:</b>
+							   <div class="form-group">
+									<p><input type="text" value="Семенович"  class="form-control" id='grandname'></p>
+							   </div>
+							   <b>Год рождения:</b>
+							   <div class="form-group">
+									<p><input type="text" value="1990"  class="form-control" id='god'></p>
+							   </div>
+							   <b>Место рождения:</b>
+							   <div class="form-group">
+									<p><input  type="text" value="Одесса"  class="form-control" id='mesto'></p>
+							   </div>
+							   <b>Любимое занятие:</b>
+							   <div class="form-group">
+									<p><input type="text" value="читать"  class="form-control" id='hobby'></p>
+							   </div>
+							   <b>Не любимое занятие:</b>
+							   <div class="form-group">
+								   <p><input type="text" value="мыть посуду" class="form-control" id='nolike'></p> <br>
+										<input type="submit" class="btn btn-outline-warning btn-block" value="Сформировать биографию" OnClick="hello()">
+									</hr>
+							   </div>	
+							</form>
+					</div>
+			</body>
+</html>
+			
+	
